@@ -4,13 +4,14 @@
  * @return {number}
  */
 var findMedianSortedArrays = function (nums1, nums2) {
+    // if (nums1.length > nums2.length) {
+    //     [nums1, nums2] = [nums2, nums1]
+    // }
     let len1 = nums1.length;
     let len2 = nums2.length;
-    let left = Math.floor((len1 + len2+1) / 2);
+    let left = Math.floor((len1 + len2 + 1) / 2);
     let right = Math.floor((len1 + len2 + 2) / 2)
-    if (len1 > len2) {
-        [nums1, nums2] = [nums2, nums1]
-    }
+
     return (getDk(nums1, 0, len1 - 1, nums2, 0, len2 - 1, left) + getDk(nums1, 0, len1 - 1, nums2, 0, len2 - 1, right)) / 2
 
 };
@@ -20,7 +21,10 @@ function getDk(list1, start1, end1, list2, start2, end2, k) {
     let len2 = end2 - start2 + 1
     // 如果有一个长度为0 则一定是第一个数组
     if (len1 === 0) {
-        return start2 + k - 1 > len2 - 1 ? 0 : list2[start2 + k - 1]
+        return list2[start2 + k - 1]
+    }
+    if (len2 === 0) {
+        return list1[start1 + k - 1]
     }
 
     if (k === 1) {
@@ -36,5 +40,4 @@ function getDk(list1, start1, end1, list2, start2, end2, k) {
     }
 }
 
-console.log(findMedianSortedArrays([1,3],[2]))
-
+console.log(findMedianSortedArrays([100001], [100000]))
