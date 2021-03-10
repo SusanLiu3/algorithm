@@ -20,7 +20,7 @@ function getDk(list1, start1, end1, list2, start2, end2, k) {
     let len2 = end2 - start2 + 1
     // 如果有一个长度为0 则一定是第一个数组
     if (len1 === 0) {
-        return list2[start2 + k - 1]
+        return start2 + k - 1 > len2 - 1 ? 0 : list2[start2 + k - 1]
     }
 
     if (k === 1) {
