@@ -4,9 +4,5 @@
  */
 
 function lastRemaining(n, m) {
-    let count = n;
-    let idx = 0
-    while (true) {
-        let index = (idx + 1) * (m - 1) % count
-    }
+   
 }

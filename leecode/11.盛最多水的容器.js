@@ -22,6 +22,7 @@ var maxArea = function (height) {
         let endH = height[endIndex]
         let temMax = (endIndex - startIndex) * Math.min(startH, endH)
         max = Math.max(temMax, max)
+        // 指针移动的基准
         if (startH < endH) {
             startIndex++
         } else {
