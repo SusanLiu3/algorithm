@@ -15,7 +15,7 @@
  */
 var mergeTwoLists = function (l1, l2) {
     let head = new ListNode()
-    let res = head
+    let res = head // 存储头部
     while (l1 && l2) {
         if (l1.val < l2.val) {
             head.next = l1 
@@ -24,7 +24,7 @@ var mergeTwoLists = function (l1, l2) {
             head.next = l2 
             l2 = l2.next
         }
-        head=head.next
+        head=head.next // next链到下一个节点
     }
     head.next=l1?l1:l2
     return res.next
