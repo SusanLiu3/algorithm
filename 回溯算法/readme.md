@@ -1,0 +1,4 @@
+- [回溯算法](https://mp.weixin.qq.com/s/gjSgJbNbd1eAA5WkA-HeWw)
+- 回溯算法：
+    - 一种搜索方法，递归的副产品；本质就是穷举，算法不高
+    - 可以抽象成树形结构
