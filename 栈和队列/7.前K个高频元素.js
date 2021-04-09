@@ -31,7 +31,6 @@ var topKFrequent = function (nums, k) {
     }
     // 再次倒叙遍历res（个数出现最多的在元素的最后面，倒叙遍历打印即可）
     for (let i = list.length - 1; res.length < k && i > 0; i--) {
-        console.log(list[i])
         if (list[i]) {
             res.push(...list[i])
         }
