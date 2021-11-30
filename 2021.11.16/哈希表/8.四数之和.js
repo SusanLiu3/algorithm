@@ -51,5 +51,4 @@ var fourSum = function (nums, target) {
     }
   }
   return res
-
 };
