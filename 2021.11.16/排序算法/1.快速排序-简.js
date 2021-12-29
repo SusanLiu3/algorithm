@@ -4,8 +4,6 @@ function quickSort(list) {
     if (list.length<=1){
         return list
     }
-    // 3.2 单层递归逻辑
-    // 2.1 寻找基准点
     const pivot = parseInt((0 + list.length) / 2)
     const pivotItem = list.splice(pivot, 1)
     const left = []
