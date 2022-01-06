@@ -1,7 +1,8 @@
 function selectSort(list) {
     for (let i = 0; i < list.length; i++) {
+        // 假设当前元素最小
         let minIdx = i
-        // 找出最小的元素索引
+        // 找出数组剩余元素比假定的元素还小的元素索引
         for (let j = i; j < list.length; j++) {
             if (list[j] < list[minIdx]) {
                 minIdx = j

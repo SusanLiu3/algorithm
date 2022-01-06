@@ -12,7 +12,7 @@ function divide(list, start, end) {
     // 1. 定义一个基准值 选择最后一个元素
     const pivotItem = list[end - 1]
     // 2. 定义一个指针
-    let i = start - 1
+    let i = start - 1  // 分割指针，索引比i大的元素 比基准元素大
     // 3. 遍历数组
     for (let j = start; j < end; j++) {
         // 比较当前元素和基准值
